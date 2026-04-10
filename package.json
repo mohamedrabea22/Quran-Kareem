@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "tailwindcss": "^3.4.17",
+    "@tsconfig/node16": "^16.1.3",
+    "common-js": "^0.3.8",
+    "hls.js": "^1.5.20"
+  },
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css",
+    "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  }
+}

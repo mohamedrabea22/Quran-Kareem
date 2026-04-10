@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفسير</title>
+        <link rel="stylesheet" href="output.css">
+        <link rel="stylesheet" href="all.css">
+        <link rel="stylesheet" href="tafsir.css">
+
+</head>
+<body>
+        <div id="container" class=" w-full fixed top-0 z-50 shadow-lg bg-white flex justify-center md:top-0 md:hidden">
+            <div class=" rounded-full relative top-6 bg-white shadow-lg ">
+                <a href="index.html"><img width="60px" src="image/logo.png" alt=""> </a>
+            </div>
+        
+        </div>
+        <!-- start div background -->
+        <div
+            class="hero  bg-[url('image/background.jpg')] bg-cover bg-center  bg-no-repeat flex flex-col gap-4 md:gap-12 justify-center items-center ">
+        <h1 class="text text-yellow-700 text-4xl  md:text-6xl lg:text-6xl xl:text-8xl 2xl:text-9xl">يقول النبي ﷺ</h1>
+            <h2 class="text text-yellow-700 text-4xl  md:text-6xl lg:text-6xl xl:text-8xl 2xl:text-9xl  "> «خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ»</h2>
+        </div>
+        <!-- end div background -->
+        
+        
+        
+        <!-- start container navebar -->
+        <div id="container" class="fixed bottom-0 z-50  md:top-0 w-full  md:border-none h-fit ">
+            <!-- nav mobile -->
+        
+            <div
+                class="navMobile flex flex-row justify-evenly  items-center list-none md:hidden px-3 backdrop-blur flex-none transition-colors duration-500  dark:border-slate-50/[0.06] supports-backdrop-blur:bg-yellow-700 dark:bg-transparent">
+        
+                <div class="text-center relative">
+                    
+                    <li><a class=" p-3 " href="index.html"><i id="icon" class="fa-solid fa-house fa-lg"></i></a></li>
+                    <span class="text-yellow-700">الرئيسيه</span>
+                </div>
+                <!-- ______________ -->
+
+                <!-- ___________________ -->
+                <div class="text-center relative">
+                    <div class="tanda"></div>
+                    <li><a class=" p-3 " href="tafsir.html"><i id="icon" class="fa-solid fa-book-open-reader fa-xl"></i></a>
+                    </li>
+                    <span class="text-yellow-700 text-center">تفسير</span>
+                </div>
+                <!-- _______________ -->
+
+        
+            </div>
+            <!-- nav pc -->
+            <div id="Parentnavbar" class="hidden md:flex flex-row justify-around  items-center shadow-lg  ">
+                <a class="cursor-pointer" href="index.html"><img width="80px" src="image/logo.png" alt=""></a>
+            
+                <div id="Navebar" class="hidden md:flex md:flex-row md:gap-7 list-none p-2 text-yellow-700 ">
+                    <li><a class=" hover:bg-yellow-700 transition p-3 " href="index.html">الرئيسيه</a></li>
+                    <li><a class=" hover:bg-yellow-700 transition p-3 " href="tafsir.html">تفسير</a></li>
+                </div>
+            </div>
+        </div>
+<!-- content -->
+         <div id="ContinerContent"
+                    class="ContinerContent pt-4 md:p-1 relative md:relative  bg-white flex flex-col items-center justify-center  gap-6  lg:justify-evenly md:w-full md:flex-row  md:gap-2 h-fit  rounded-lg shadow-md  w-full  bottom-10 md:h-96 md:bottom-28 md:mt-0 md:mr-auto md:ml-auto md:mb-0   lg:w-4/5 lg:gap-4 lg:p-0 ">
+                
+                    <div id="loader" class="loader absolute top-20 hidden">
+                
+                    </div>
+            
+                    <!-- ______________________________ -->
+                    <div class="SelectTheNovel flex flex-col gap-5 items-center ">
+                        <p class="text-center text-2xl" id="name"> </p>
+                        <select id="selectTafsir"
+                            class="w-60  cursor-pointer rounded-r-xl  rounded-l-xl   outline-none border-solid border-2 border-yellow-700 rounded-s text-center"
+                            name="">
+                            <option  class=" cursor-pointer scroll-smooth" id="optionTafasir" value=""> اختر السورة المفسره</option>
+                        </select>
+                    </div>
+                    <!-- ______________________ -->
+                
+            
+                
+                    <!-- audio -->
+                
+                    <media-theme-tailwind-audio style="  --media-accent-color:rgb(51 65 85); --media-primary-color: #a16207; "
+                        class=" w-11/12  md:absolute bottom-0  md:w-3/4  shadow-sm ">
+                
+                <audio id="audio" slot="media" autoplay playsinline crossorigin></audio>
+                
+                    </media-theme-tailwind-audio>
+                
+                
+                
+                
+                
+                
+                </div>
+
+            <!-- erorr network content -->
+            <div id="erorr_in_network"
+                class="hidden pt-4 pb-4 md:p-1 md:relative  bg-white  flex-col items-center justify-center   gap-6  lg:justify-evenly md:w-full md:flex-row  md:gap-2   rounded-lg shadow-md  w-full   md:h-96 bottom-60 md:mt-0 md:mr-auto md:ml-auto md:mb-0   lg:w-4/5 lg:gap-4 lg:p-0 lg:flex-row ">
+            
+                <img class="h-36  md:h-64 " src="../image/erorr.png" alt="">
+                <h3 class="text-center w-fit text-red-900 md:text-xl "> حدث مشكله في جلب البيانات يرجي التأكد من اتصال الانترنت
+                    واعادة المحاوله</h3>
+            
+            
+            </div>
+
+
+            <!-- footer -->
+    <!--<footer
+        class=" mt-20 md:m-0  flex   flex-col justify-evenly  w-full  bg-slate-950  text-white p-5 md:flex-row md:justify-around md:relative ">
+
+
+        <!-- footerText -->
+
+        <!-- endFooterText -->
+
+        <!--Social Media -->
+        <!--<div class="socialMedia flex flex-col gap-2 ">
+            <h2 class="mb-3 font-[800] ">تواصل معنا من خلال</h2>
+
+            <a class="underline w-fit cursor-pointer" target="_blank"
+                href="https://mohamedrabea22.github.io/Mohamed-Rabea-Mahran/">موقعنا الالكتروني</a>
+        </div>
+        <!--end Social Media -->
+
+        <!--divNameDeveloper -->
+        <!--<div class="w-full md:absolute bottom-0 text-center p-4">
+            <h2 class="mb-3 font-[800]">مطور الموقع</h2>
+            <p>Mohamed Rabea</p>
+        </div>
+    -->
+    </footer>
+<script src="tafsir.js"></script>
+<script src="all.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/player.style/tailwind-audio/+esm"></script>
+</body>
+
+
+</html>

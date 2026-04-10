@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الرئيسيه</title>
+    <link href="output.css" rel="stylesheet">
+    <link rel="stylesheet" href="styel.css">
+    <link rel="stylesheet" href="all.css">
+</head>
+
+<body>
+    <div id="overlay" class="w-full fixed h-screen hidden"></div>
+    <!-- container top logo phone -->
+    <div id="container" class=" w-full fixed top-0 z-50 shadow-lg bg-white flex justify-center md:top-0 md:hidden">
+        <div class=" rounded-full relative top-6 bg-white shadow-lg ">
+            <a href="index.html"><img width="60px" src="image/logo.png" alt=""> </a>
+        </div>
+
+    </div>
+    <!-- start div background -->
+    <div
+        class="hero  bg-[url('image/background.jpg')] bg-cover bg-center  bg-no-repeat flex justify-center items-center ">
+        <h2 class="text text-yellow-700 text-2xl  md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl  ">وَإِذَا قُرِئَ
+            الْقُرْآنُ فَاسْتَمِعُوا لَهُ وَأَنْصِتُوا لَعَلَّكُمْ تُرْحَمُونَ</h2>
+    </div>
+    <!-- end div background -->
+
+
+
+    <!-- start container navebar -->
+    <div id="container" class="fixed bottom-0 z-50  md:top-0 w-full  md:border-none h-fit ">
+        <!-- nav mobile -->
+
+        <div
+            class="navMobile flex flex-row justify-evenly  items-center list-none md:hidden px-3 backdrop-blur flex-none transition-colors duration-500  dark:border-slate-50/[0.06] supports-backdrop-blur:bg-yellow-700 dark:bg-transparent">
+
+            <div class="text-center relative">
+                <div class="tanda"></div>
+                <li><a class=" p-3 " href=""><i id="icon" class="fa-solid fa-house fa-lg"></i></a></li>
+                <span class="text-yellow-700">الرئيسيه</span>
+            </div>
+            <!-- ______________ -->
+
+            <!-- ___________________ -->
+            <div class="text-center relative">
+                <li><a class=" p-3 " href="tafsir.html"><i id="icon" class="fa-solid fa-book-open-reader fa-xl"></i></a></li>
+                <span class="text-yellow-700 text-center">تفسير</span>
+            </div>
+
+
+        </div>
+
+        <!-- nav pc -->
+        <div id="Parentnavbar" class="hidden md:flex flex-row justify-around  items-center shadow-lg  ">
+           <a class="cursor-pointer" href="index.html"><img width="80px" src="image/logo.png" alt=""></a> 
+
+            <div id="Navebar" class="hidden md:flex md:flex-row md:gap-7 list-none p-2 text-yellow-700 ">
+                <li><a class=" hover:bg-yellow-700 transition p-3 " href="">الرئيسيه</a></li>
+                <li><a class=" hover:bg-yellow-700 transition p-3 " href="tafsir.html">تفسير</a></li>
+            </div>
+        </div>
+
+    </div>
+    <!-- end container navebar -->
+
+
+    <!-- start container content -->
+     
+    <div id="ContinerContent"
+        class="ContinerContent pt-4 md:p-1 md:relative  bg-white flex flex-col items-center justify-center  gap-6  lg:justify-evenly md:w-full md:flex-row  md:gap-2 h-fit  rounded-lg shadow-md  w-full  md:h-96 bottom-60 md:mt-0 md:mr-auto md:ml-auto md:mb-0   lg:w-4/5 lg:gap-4 lg:p-0 ">
+    
+        <div id="loader" class="loader absolute top-20 hidden">
+
+        </div>
+        <!-- ______________________________ -->
+        <div class="SelectReader flex flex-col  gap-3 ">
+          
+            <select  id="SelectReader" value="اختر قارئ" class=" w-60  cursor-pointer rounded-r-xl rounded-l-xl   outline-none border-solid border-2 border-yellow-700 rounded-s text-center" name="">
+                <option class=" cursor-pointer scroll-smooth" id="optionReader">اختر قارئ</option>
+            </select>
+        </div>
+        <!-- ______________________ -->
+    
+    
+        <!-- ______________________________ -->
+        <div class="SelectTheNovel flex flex-col gap-3 ">
+            <!-- <p>اختر روايه </p> -->
+            <select id="selectNovel" class="w-60  cursor-pointer rounded-r-xl  rounded-l-xl   outline-none border-solid border-2 border-yellow-700 rounded-s text-center" name="">
+                <option class=" cursor-pointer scroll-smooth" id="optionNoval" value=""> اختر روايه</option>
+            </select>
+        </div>
+        <!-- ______________________ -->
+    
+    
+        <!-- ______________________________ -->
+        <div class="SuratAl-Quran flex flex-col gap-3 ">
+            <!-- <p>اختر سورة القرأن</p> -->
+            <select id="SuratAl_Quran" class="w-60 cursor-pointer rounded-r-xl rounded-l-xl  outline-none border-solid border-2 border-yellow-700 rounded-s text-center" name="">
+                <option class="cursor-pointer scroll-smooth"  id="optionSuratAl_Quran" value="">اختر سورة القرأن</option>
+            </select>
+        </div>
+    
+        <!-- ______________________ -->
+    
+      <!-- audio -->
+       
+         <media-theme-tailwind-audio  style="  --media-accent-color:rgb(51 65 85); --media-primary-color: #a16207; "  class=" w-11/12  md:absolute bottom-0  md:w-3/4  shadow-sm ">
+
+        <audio id="audio"  slot="media"  autoplay playsinline crossorigin ></audio>
+      
+        </media-theme-tailwind-audio>
+
+
+
+
+      
+  
+    </div>
+
+    <!-- erorr network content -->
+    <div id="erorr_in_network"  class="hidden pt-4 pb-4 md:p-1 md:relative  bg-white flex flex-col items-center justify-center   gap-6  lg:justify-evenly md:w-full md:flex-row  md:gap-2   rounded-lg shadow-md  w-full   md:h-96 bottom-60 md:mt-0 md:mr-auto md:ml-auto md:mb-0   lg:w-4/5 lg:gap-4 lg:p-0 lg:flex-row ">
+    
+    <img   class="h-36  md:h-64 " src="../image/erorr.png" alt="">
+    <h3 class="text-center w-fit text-red-900 md:text-xl ">  حدث مشكله في جلب البيانات يرجي التأكد من اتصال الانترنت واعادة المحاوله</h3>
+
+     
+    </div>
+
+    <!-- div rwayah not complete -->
+     <div id="rewayh_dont_complete" class="bg-white w-full md:w-96 h-52 p-3 hidden  flex flex-col justify-around m-auto">
+         <h3 class="text-center  text-red-900 md:text-xl">عذرا سور الروايه غير مكتمله سيتم اضافتها قريباا </h3>
+         <button id="btn_rewayh_dont_complete" class="bg-red-900 text-white p-4 cursor-pointer">حسنا</button>
+     </div>
+
+    <!-- footer -->
+    <!--<footer
+        class=" mt-20 md:m-0  flex   flex-col justify-evenly  w-full  bg-slate-950  text-white p-5 md:flex-row md:justify-around md:relative ">
+
+
+        <!-- footerText -->
+
+        <!-- endFooterText -->
+
+        <!--Social Media -->
+        <!--<div class="socialMedia flex flex-row gap-2 " >
+            <h2 class="mb-3 font-[800] " >تواصل معنا من خلال</h2>
+
+            <a class="underline w-fit cursor-pointer" target="_blank"
+                href="https://mohamedrabea22.github.io/Mohamed-Rabea-Mahran/">موقعنا الالكتروني</a>
+        </div>
+        <!--end Social Media -->
+
+        <!--divNameDeveloper -->
+       <!-- <div class="w-full md:absolute bottom-0 text-center p-4" >
+            <h2 class="mb-3 font-[800]">مطور الموقع</h2>
+            <p>Mohamed Rabea</p>
+        </div>-->
+
+    </footer>
+
+
+    <script src="quran.js"></script>
+    <script src="all.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/player.style/tailwind-audio/+esm"></script>
+</body>
+
+</html>
